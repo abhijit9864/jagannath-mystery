@@ -238,39 +238,6 @@ export const Scene2FlagClimber: React.FC = () => {
           </text>
         </g>
       </svg> */}
-
-      {/* Caption stays outside the artwork transform and remains fixed in place. */}
-      <div
-        style={{
-          position: "absolute",
-          left: 42,
-          right: 42,
-          bottom: 92,
-          padding: "25px 28px",
-          borderRadius: 22,
-          background: "rgba(15, 8, 22, 0.76)",
-          border: "2px solid rgba(255, 212, 90, 0.78)",
-          boxShadow: "0 12px 38px rgba(0,0,0,0.5), 0 0 22px rgba(255,190,55,0.2)",
-          opacity: captionOpacity,
-          transform: `translateY(${captionY}px)`,
-        }}
-      >
-        <div
-          style={{
-            color: WHITE,
-            fontSize: 35,
-            lineHeight: 1.55,
-            fontWeight: 850,
-            textAlign: "center",
-            fontFamily: "Noto Sans Devanagari, Mangal, sans-serif",
-            textShadow: "0 3px 12px rgba(0,0,0,0.9)",
-          }}
-        >
-          हर शाम एक सेवक...
-          <span style={{ color: GOLD }}> बिना किसी आधुनिक सुरक्षा उपकरण के...</span>
-          लगभग दो सौ फीट ऊँचे शिखर पर चढ़कर ध्वज बदलता है!
-        </div>
-      </div>
     </AbsoluteFill>
   );
 };

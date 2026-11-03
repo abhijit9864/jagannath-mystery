@@ -198,63 +198,6 @@ export const Scene1Intro: React.FC = () => {
         );
       })}
 
-      {/* TOP HEADING */}
-      <div
-        style={{
-          position: "absolute",
-          top: 100,
-          width: "100%",
-          padding: "0 25px",
-          textAlign: "center",
-          opacity: headingOpacity,
-        }}
-      >
-        <div
-          style={{
-            fontSize: 64,
-            fontWeight: 800,
-            color: WHITE,
-            fontFamily: "Noto Sans Devanagari, Mangal, sans-serif",
-            textShadow: "0 5px 18px #000",
-          }}
-        >
-          दुनिया का सबसे
-        </div>
-
-        <div
-          style={{
-            fontSize: 76,
-            fontWeight: 900,
-            color: GOLD,
-            marginTop: 2,
-            fontFamily: "Noto Sans Devanagari, Mangal, sans-serif",
-            textShadow:
-              "0 0 20px rgba(255,190,40,0.9), 0 5px 15px #000",
-          }}
-        >
-          रहस्यमयी मंदिर
-        </div>
-
-        {/* Gold separator */}
-        <div
-          style={{
-            width: 420,
-            height: 3,
-            margin: "18px auto 22px",
-            background:
-              "linear-gradient(90deg, transparent, #FFD45A, transparent)",
-            boxShadow: "0 0 15px #FFD45A",
-          }}
-        />
-
-        <WordHighlight
-          words={subtitleWords}
-          startFrame={42}
-          interval={7}
-          fontSize={31}
-        />
-      </div>
-
       {/* FLOATING QUESTION MARKS RIGHT */}
       {questions.map((q, i) => {
         const opacity = interpolate(
@@ -300,25 +243,6 @@ export const Scene1Intro: React.FC = () => {
           opacity: bottomOpacity,
         }}
       />
-
-      {/* BOTTOM WORD-BY-WORD TEXT */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 105,
-          width: "100%",
-          padding: "0 48px",
-          textAlign: "center",
-          opacity: bottomOpacity,
-        }}
-      >
-        <WordHighlight
-          words={bottomWords}
-          startFrame={150}
-          interval={5}
-          fontSize={38}
-        />
-      </div>
     </AbsoluteFill>
   );
 };

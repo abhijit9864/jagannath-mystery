@@ -50,65 +50,6 @@ export const Scene2FlagMystery: React.FC = () => {
           pointerEvents: "none",
         }}
       />
-
-      <div
-        style={{
-          position: "absolute",
-          top: 82,
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          opacity: labelOpacity,
-          fontFamily: "Noto Sans Devanagari, Mangal, sans-serif",
-          fontSize: 31,
-          fontWeight: 800,
-          color: WHITE,
-          textShadow: "0 3px 14px rgba(0,0,0,0.65)",
-        }}
-      >
-        पहला <span style={{ color: GOLD }}>रहस्य</span>
-      </div>
-
-      {/* White-and-gold narration caption remains unchanged. */}
-      <div
-        style={{
-          position: "absolute",
-          left: 48,
-          right: 48,
-          bottom: 125,
-          padding: "28px 30px",
-          borderRadius: 22,
-          background: "rgba(8, 7, 15, 0.72)",
-          border: "2px solid rgba(255, 212, 90, 0.78)",
-          boxShadow:
-            "0 12px 38px rgba(0,0,0,0.48), 0 0 22px rgba(255,190,55,0.18)",
-          opacity: captionOpacity,
-          transform: `translateY(${captionY}px)`,
-        }}
-      >
-        <div
-          style={{
-            color: WHITE,
-            fontSize: 39,
-            lineHeight: 1.58,
-            fontWeight: 850,
-            textAlign: "center",
-            fontFamily: "Noto Sans Devanagari, Mangal, sans-serif",
-            textShadow: "0 3px 12px rgba(0,0,0,0.9)",
-          }}
-        >
-          मंदिर के शिखर पर लगा ध्वज
-          <span
-            style={{
-              color: GOLD,
-              textShadow: "0 0 16px rgba(255,212,90,0.55)",
-            }}
-          >
-            {" "}हमेशा हवा की विपरीत दिशा में{" "}
-          </span>
-          लहराता दिखाई देता है!
-        </div>
-      </div>
     </AbsoluteFill>
   );
 };
