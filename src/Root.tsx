@@ -1,55 +1,46 @@
+
 import { Composition, Folder } from "remotion";
-import { HelloWorld } from "./HelloWorld";
-import { Logo } from "./HelloWorld/Logo";
-import { Title } from "./HelloWorld/Title";
-
-// Each <Composition> is an entry in the sidebar!
-
+import { Scene1Intro } from "./scenes/Scene1Intro";
+import { Scene2FlagMystery } from "./scenes/Scene2FlagMystery";
+import { Scene2FlagClimber } from "./scenes/Scene2FlagClimber";
+import { Scene2FlagEnding } from "./scenes/Scene2FlagEnding";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <Folder name="Elements">
+      <Folder name="Jagannath-Mystery">
         <Composition
-          id="Logo"
-          component={Logo}
-          durationInFrames={150}
-          fps={30}
-          width={1920}
-          height={1080}
-          defaultProps={{
-            logoColor1: "#91EAE4",
-            logoColor2: "#86A8E7",
-          }}
-        />
-        <Composition
-          id="Title"
-          component={Title}
-          durationInFrames={115}
-          fps={30}
-          width={1920}
-          height={1080}
-          defaultProps={{
-            titleText: "Welcome to Remotion",
-            titleColor: "#000000",
-          }}
-        />
+  id="JagannathIntro"
+  component={Scene1Intro}
+  durationInFrames={300}
+  fps={30}
+  width={1080}
+  height={1920}
+/>
+<Composition
+  id="Scene2FlagMystery"
+  component={Scene2FlagMystery}
+  durationInFrames={300}
+  fps={30}
+  width={1080}
+  height={1920}
+/>
+<Composition
+  id="Scene2FlagClimber"
+  component={Scene2FlagClimber}
+  durationInFrames={300}
+  fps={30}
+  width={1080}
+  height={1920}
+/>
+<Composition
+  id="Scene2FlagEnding"
+  component={Scene2FlagEnding}
+  durationInFrames={180}
+  fps={30}
+  width={1080}
+  height={1920}
+/>
       </Folder>
-      <Composition
-        // You can take the "id" to render a video:
-        // bunx remotion render HelloWorld
-        id="HelloWorld"
-        component={HelloWorld}
-        durationInFrames={150}
-        fps={30}
-        width={1920}
-        height={1080}
-        // You can override these props for each render:
-        // https://www.remotion.dev/docs/parametrized-rendering
-        defaultProps={{
-          titleText: "Welcome to Remotion",
-          titleColor: "#000000",
-        }}
-      />
 
     </>
   );
